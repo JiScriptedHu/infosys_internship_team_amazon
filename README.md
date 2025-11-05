@@ -6,8 +6,8 @@
 - **Mentor Name:** Sofia  
 - **Interns:**  
   - [Jayesh Kumar Nag](https://github.com/JiScriptedHu)  
-  - [Name 2](https://github.com/username2)  
-  - [Name 3](https://github.com/username3)  
+  - [Iswarya Jasmine](https://github.com/Iswarya-Jasmine)  
+  - [Nagula Naga Prasad](https://github.com/nagaprasad31)  
 
 ## Goals
 The main goals of this AI/ML internship are:
