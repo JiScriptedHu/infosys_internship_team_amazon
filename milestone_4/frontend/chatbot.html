@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infosys Stock AI Chat</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="chatbot.css">
+    
+    <script>
+        const user = localStorage.getItem('stockUser');
+        if (!user) {
+            window.stop();
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>Infosys Stock AI</h2>
+                </div>
+                <nav>
+                    <a href="index.html">Dashboard</a>
+                    <a href="forecast.html">Forecast</a>
+                    <a href="chatbot.html" class="active">Chatbot</a>
+                </nav>
+            </div>
+            
+            <!-- Removed Status Section from Sidebar -->
+
+            <div class="logout-btn">Sign Out</div>
+        </aside>
+
+        <main class="main-content">
+            <!-- Updated Header with Status -->
+            <header class="chat-header-bar">
+                <div class="assistant-profile">
+                    <div class="avatar-circle">
+                        <i class="ai-icon">AI</i>
+                        <span class="status-dot online"></span>
+                    </div>
+                    <div class="assistant-details">
+                        <h1>Chat Assist</h1>
+                        <p class="status-text">Online • Ready to assist</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="chat-container">
+                <div class="chat-window custom-scroll" id="chatWindow">
+                    <!-- Welcome Message -->
+                    <div class="message bot">
+                        <div class="bubble">
+                            Hello! I can help you with real-time stock prices and basic market queries. Try asking "What is the price of INFY.NS?"
+                        </div>
+                        <div class="timestamp">Just now</div>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <input type="text" id="userInput" placeholder="Type your question here..." autocomplete="off">
+                    <button onclick="sendMessage()" id="sendBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
